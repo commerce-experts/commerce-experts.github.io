@@ -29,8 +29,10 @@
 	<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:400,300,700' rel='stylesheet' type='text/css'/>	
 	    
     <!-- Import CSS -->
-	<link rel="stylesheet" href="css/style.css" />       
+	<link rel="stylesheet" href="css/style.css" />
 
+	<!-- Cookiebot -->
+	<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js?cbid=1e207d0d-1be2-4ffe-b066-f8049aa32e35" data-blockingmode="auto" type="text/javascript"></script>
 </head>
 
 <body>
@@ -49,8 +51,7 @@
 						<li class="current scroll-link"><a href="#home">Startseite</a></li>
 						<li><a class="scroll-link" href="#about">Schwerpunkte</a></li>
 						<li><a class="scroll-link" href="#team">Team</a></li>
-						<!-- <li><a class="scroll-link" href="#protfolio">Referenzen</a></li> -->
-                        <li><a class="scroll-link" href="#parallax4">Partner</a></li> 
+                        <li><a class="scroll-link" href="#parallax4">Partner</a></li>
 						<li><a class="scroll-link" href="#contact">Kontakt</a></li>
 						<!--<li><a class="external" href="blog.html">Blog</a></li> -->
 					</ul>
@@ -79,11 +80,10 @@
 					</div>
 					<div class="span8">
 						<ul id="fluid-nav" class="fluid-navigation visible-desktop">
-							<li class="current"><a href="#home">Startseite</a></li>
-							<li><a href="#about">Schwerpunkte</a></li>
-							<li><a href="#team">Team</a></li>
-							<!-- <li><a href="#portfolio">Referenzen</a></li> -->
-							<li><a class="scroll-link" href="#parallax4">Partner</a></li> 
+							<li class="current scroll-link"><a href="#home">Startseite</a></li>
+							<li><a class="scroll-link" href="#about">Schwerpunkte</a></li>
+							<li><a class="scroll-link" href="#team">Team</a></li>
+							<li><a class="scroll-link" href="#parallax4">Partner</a></li>
 							<li><a href="#contact">Kontakt</a></li>
 							<!--<li><a class="external" href="blog.html">Blog</a></li>-->
 							
@@ -406,26 +406,43 @@ AI-powered search query intelligence API" alt="search|hub - Super charging your 
 			© 2014 - 2020<br>CXP Commerce Experts GmbH
 		</div>
 	</div>
-    <!-- End Wrapper for Content -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<!-- End Wrapper for Content -->
+	<script src="js/jquery-1.8.1.min.js"></script>
 	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/jquery.flexslider.min.js"></script>
+	<script src="js/jquery.isotope.min.js"></script>
+	<script src="js/jquery.fancybox.pack.min.js"></script>
+	<script src="js/jquery.fancybox-media.min.js"></script>
 	<script src="js/jquery.sticky.min.js"></script><!-- Sticky Navigation -->
 	<script src="js/jquery.scrollTo.min.js"></script><!-- Smooth Scrolling -->
 	<script src="js/jquery.nav.min.js"></script><!-- One Page Navigation -->
 	<script src="js/selectnav.min.js"></script><!-- Mobile Navigation -->
 	<script src="js/jquery.parallax-1.1.3.min.js"></script><!-- Parallax -->
-    <script src="js/settings.min.js"></script> <!-- JS Options -->
-    
-    <!-- Load Analytics
-  	================================================== -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<script src="js/settings.min.js"></script> <!-- JS Options -->
 
-      ga('create', 'UA-54571093-1', 'auto');
-      ga('send', 'pageview');
-    </script>
+	<!-- Load Analytics
+      ================================================== -->
+	<script>
+		window.addEventListener('CookiebotOnAccept', function (e) {
+			if (Cookiebot.consent.statistics) {
+				(function (i, s, o, g, r, a, m) {
+					i['GoogleAnalyticsObject'] = r;
+					i[r] = i[r] || function () {
+						(i[r].q = i[r].q || []).push(arguments)
+					}, i[r].l = 1 * new Date();
+					a = s.createElement(o),
+							m = s.getElementsByTagName(o)[0];
+					a.async = 1;
+					a.src = g;
+					m.parentNode.insertBefore(a, m)
+				})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+				ga('create', 'UA-54571093-1', 'auto');
+				ga('send', 'pageview');
+			}
+		}, false);
+
+
+	</script>
 </body>
 </html>
